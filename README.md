@@ -1,3 +1,4 @@
+![Image of a kingfisher under normal trichromatic vision (left) and under protanomalous vision (right)](./example_simulation.png)
 # CVD-simulation generator
 
 Generate Machado matrices used to simulate color-vision deficiencies (CVDs) of various severities for given spectral power distributions of the optical channels of a color model (like RGB or CMY).
