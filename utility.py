@@ -70,10 +70,10 @@ r_cmy_abebe = colour.MultiSpectralDistributions(
     name="Printer ink reflectivities",
 )
 r_cmy_abebe = r_cmy_abebe.align(sensitivities.shape)
-illuminant_a = colour.SDS_ILLUMINANTS["A"]
+illuminant = colour.SDS_ILLUMINANTS["D65"]
 spds_cmy_abebe = colour.MultiSpectralDistributions(
     data={
-        wl: illuminant_a[wl] * r_cmy_abebe[wl] for wl in r_cmy_abebe.wavelengths
+        wl: illuminant[wl] * r_cmy_abebe[wl] for wl in r_cmy_abebe.wavelengths
     },
     labels=["C", "M", "Y"],
     name="Printer spectral power distributions",
