@@ -11,6 +11,7 @@ The script `plot_distributions.py` visualizes the cone sensitivities and spectra
 The script `print_Machado_matrices.py` generates the Machado matrices for both the RGB and the CMY color model given their respective medium (LCD screen for RGB, ink-jet printer for CMY).
 It generates Machado matrices for Protanopia and Deuteranopia for severities from 0 to 1 in increments of 0.1.
 No matrices are generated for Tritanopia as the transformation is discouraged from being used for this type of CVD.
+It also prints the near-null-space vectors of Protanopia and Deuteranopia for full severity.
 
 The scripts `rgb_cvd_simulation.py` and `cmy_cvd_simulation.py` visualize the effects of the CVD simulation in the RGB or the CMY color model, applied to the image `test_image.png`.
 Beware that for the CMY simulation, alternative spectral power distributions are used to make the test useful on LCD screens.

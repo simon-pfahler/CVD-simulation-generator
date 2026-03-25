@@ -1,3 +1,5 @@
+from scipy.linalg import null_space
+
 from utility import *
 
 np.set_printoptions(precision=6, suppress=True)
@@ -16,6 +18,9 @@ for alpha_L_index in range(11):
         f" {{ {M[2,0]:.6f}, {M[2,1]:.6f}, {M[2,2]:.6f} }} }},"
     )
 print("}")
+print("Near-null space")
+print(null_space(M, rcond=1e-3))
+
 
 print("Deuteranopia")
 print("{")
@@ -30,6 +35,8 @@ for alpha_M_index in range(11):
         f" {{ {M[2,0]:.6f}, {M[2,1]:.6f}, {M[2,2]:.6f} }} }},"
     )
 print("}")
+print("Near-null space")
+print(null_space(M, rcond=1e-3))
 
 print("\nCMY conversion:")
 print("Protanopia")
@@ -45,6 +52,8 @@ for alpha_L_index in range(11):
         f" {{ {M[2,0]:.6f}, {M[2,1]:.6f}, {M[2,2]:.6f} }} }},"
     )
 print("}")
+print("Near-null space")
+print(null_space(M, rcond=1e-3))
 
 print("Deuteranopia")
 print("{")
@@ -59,3 +68,5 @@ for alpha_M_index in range(11):
         f" {{ {M[2,0]:.6f}, {M[2,1]:.6f}, {M[2,2]:.6f} }} }},"
     )
 print("}")
+print("Near-null space")
+print(null_space(M, rcond=1e-3))
